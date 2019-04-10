@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+
+        <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+
+        <title>SENSOR IOE THING</title>
+
+
+    	</head>
+
+    	<body>
+
+        <input id="red" type="range" min="0" max="255" step="1" value="0">
+
+        <div id="chart">  </div>
+
+        <script type="text/javascript">
+
+          var pubnub = new PubNub(
+            {
+              publishKey: "pub-c-76d1d259-d00d-41ab-8bbe-78ba591eaf21",
+              subscribeKey: "sub-c-8a024ae2-3909-11e9-b682-2a55d2175413"
+            }
+          );
+
+        pubnubDemo.publish(
+          {message: {"color":"blue"},
+          channel: 'ChannelMate'},
+          function(status, response){
+              if (status.error) {
+              // handle error
+                  console.log(status)
+              } else {
+                  console.log("message Published w/ timetoken", response.timetoken)
+              }
+            }
+          );
+
+          var channel = 'ChannelMate';
+
+        </script>
+
+
+
+    	</body>
+    </html>
