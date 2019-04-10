@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #38404f;
+  color: #ccc;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h3 {
+  text-align: center;
+}
+
+.panel-body * {
+  color: #ccc;
+}
+
+.panel-default {
+  border-color: #999;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #38404f;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.graph {
+  min-height: 408px;
+}
+
+.c3 .c3-axis-x, .c3 .c3-axis-x line, .c3 .c3-axis-x path,
+.c3 .c3-axis-y, .c3 .c3-axis-y line, .c3 .c3-axis-y path {
+  stroke: unset;
+  fill: #ccc;
+}
+
+.c3-legend-item text {
+  fill: #ccc;
+}
+
+.c3-axis path {
+  width: 1px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
